@@ -22,19 +22,21 @@ package z80_cpu.registers ;
 public class reg_8bit
 {
     /**
-     * Register
+     * Main register and alternate register
      */
     private int reg_8bit ;
+    private int alt_8bit ;
     
     
     /**
      * Class constructor
      * 
-     * This is the class constructor
+     * This is the class constructor and initializes both the main register and
+     * the alternate register to 0
      */
     public reg_8bit()
     {
-        this.reg_8bit = 0 ;
+        this.reset( ) ;
     }
     
     
@@ -63,6 +65,33 @@ public class reg_8bit
     public int fetch( )
     {
         return  AND_FF( this.reg_8bit ) ;
+    }
+    
+    
+    /**
+     * Method:  exx_reg( )
+     * 
+     * This method exchanges the value of the main register with the alternate
+     * regiter
+     */
+    public void exx_reg( )
+    {
+        int temp_reg  = this.reg_8bit ;
+        this.reg_8bit = this.alt_8bit ;
+        this.alt_8bit = temp_reg ;
+    }
+    
+    
+    /**
+     * Method:  reset( )
+     * 
+     * This method initializes both the main register and the alternate register
+     * to 0.
+     */
+    public void reset( )
+    {
+        this.reg_8bit = 0 ;
+        this.alt_8bit = 0 ;
     }
     
     
