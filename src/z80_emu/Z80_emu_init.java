@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package z80_emu;
+package z80_emu ;
+
+import java.io.* ;
+import z80_cpu.registers.* ;
 
 /**
  *
@@ -14,6 +17,7 @@ public class Z80_emu_init
 
     private static final int xpto = 0 ;
     
+    private int A_value = z80_cpu.registers.z80_regs.A.fetch() ;
     
     /**
      * @param args the command line arguments
