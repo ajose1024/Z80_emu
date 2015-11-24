@@ -245,17 +245,10 @@ public class register_tests
      * This method prints the value of the register 'register', stores the value
      * 'reg_value' onto it and prints again the value of the reister 'register'
      * 
-<<<<<<< HEAD
      * @param   register        (reg_8bit)
      * @param   lower_limit     (int)
      * @param   upper_limit     (int)
      * @param   reg_name        (String)
-=======
-     * @param register
-     * @param lower_limit
-     * @param upper_limit
-     * @param reg_name 
->>>>>>> e56fc72f85f322b2ee49d8ebd7365bd9002ead17
      */
     private static void test_8bit_reg_value( 
                                         reg_8bit register,
