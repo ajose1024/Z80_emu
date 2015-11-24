@@ -106,6 +106,10 @@ public class reg_8bit
      */
     private int AND_FF( int byte_data )
     {
+        if( byte_data < 0 )
+        {
+            byte_data = byte_data + 0x100 ;
+        }
         return  byte_data % 0x100 ;
     }
     
