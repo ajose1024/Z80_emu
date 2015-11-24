@@ -88,32 +88,158 @@ public class register_tests
      */
     public static void A_reg_test( Test_type test_type )
     {
+        z80_emu.tests.register_tests.reg_test_8bit
+        (
+            test_type,
+            z80_cpu.registers.z80_regs.A,
+            "A"
+        ) ;
+    }
+    
+    
+    /**
+     * B register test method
+     * 
+     * @param   test_type   (Test_type)
+     */
+    public static void B_reg_test( Test_type test_type )
+    {
+        z80_emu.tests.register_tests.reg_test_8bit
+        (
+            test_type,
+            z80_cpu.registers.z80_regs.B,
+            "B"
+        ) ;
+    }
+    
+    
+    /**
+     * C register test method
+     * 
+     * @param   test_type   (Test_type)
+     */
+    public static void C_reg_test( Test_type test_type )
+    {
+        z80_emu.tests.register_tests.reg_test_8bit
+        (
+            test_type,
+            z80_cpu.registers.z80_regs.C,
+            "C"
+        ) ;
+    }
+    
+    
+    /**
+     * D register test method
+     * 
+     * @param   test_type   (Test_type)
+     */
+    public static void D_reg_test( Test_type test_type )
+    {
+        z80_emu.tests.register_tests.reg_test_8bit
+        (
+            test_type,
+            z80_cpu.registers.z80_regs.D,
+            "D"
+        ) ;
+    }
+    
+    
+    /**
+     * E register test method
+     * 
+     * @param   test_type   (Test_type)
+     */
+    public static void E_reg_test( Test_type test_type )
+    {
+        z80_emu.tests.register_tests.reg_test_8bit
+        (
+            test_type,
+            z80_cpu.registers.z80_regs.E,
+            "E"
+        ) ;
+    }
+    
+    
+    /**
+     * H register test method
+     * 
+     * @param   test_type   (Test_type)
+     */
+    public static void H_reg_test( Test_type test_type )
+    {
+        z80_emu.tests.register_tests.reg_test_8bit
+        (
+            test_type,
+            z80_cpu.registers.z80_regs.H,
+            "H"
+        ) ;
+    }
+    
+    
+    /**
+     * L register test method
+     * 
+     * @param   test_type   (Test_type)
+     */
+    public static void L_reg_test( Test_type test_type )
+    {
+        z80_emu.tests.register_tests.reg_test_8bit
+        (
+            test_type,
+            z80_cpu.registers.z80_regs.L,
+            "L"
+        ) ;
+    }
+    
+    
+
+
+    /*******************
+     * Private methods
+     *******************/
+    
+        /**
+     * A register test method
+     * 
+     * @param   test_type   (Test_type)
+     */
+    private static void reg_test_8bit(
+                                        Test_type test_type,
+                                        reg_8bit register,
+                                        String reg_name
+                                     )
+    {
         switch ( test_type )
         {
             case LIMITS:
                 System.out.println
                 (
-                    "Testing 8 bit A register storage:  (LIMITS test) : \n"
+                    "Testing 8 bit " + reg_name + " register storage:  (LIMITS test) : \n"
                 ) ;
                 
                 z80_emu.tests.register_tests.LIMITS_test_8bit_reg
                 (
-                    z80_cpu.registers.z80_regs.A,
+                    register,
                     MIN_VAL,
                     MAX_VAL_8bit,
-                    "A"
+                    reg_name
                 ) ;
 
                 break ;
 
             case RUN:
-                System.out.println( "Testing 8 bit A register storage:  (RUN test) : \n" ) ;
+                System.out.println
+                (
+                    "Testing 8 bit " + reg_name + " register storage:  (RUN test) : \n"
+                ) ;
+                
                 z80_emu.tests.register_tests.RUN_test_8bit_reg
                 (
-                    z80_cpu.registers.z80_regs.A,
+                    register,
                     LOWER_LIMIT,
                     UPPER_8bit_LIMIT,
-                    "A"
+                    reg_name
                 ) ;
 
                 break ;
@@ -121,7 +247,7 @@ public class register_tests
             case EXCHANGE:
                 System.out.println
                 (
-                    "Testing 8 bit A register storage:  (EXCHANGE test) : \n" 
+                    "Testing 8 bit " + reg_name + " register storage:  (EXCHANGE test) : \n" 
                 ) ;
                 
                 z80_emu.tests.register_tests.EXCHANGE_test_8bit_reg
@@ -136,15 +262,15 @@ public class register_tests
             case RESET:
                 System.out.println
                 (
-                    "Testing RESET of normal and alternate A  register"
+                    "Testing RESET of normal and alternate " + reg_name + " register"
                 ) ;
                 
                 z80_emu.tests.register_tests.RESET_test_8bit_reg
                 (
-                    z80_cpu.registers.z80_regs.A,
+                    register,
                     ODD_8bit_PATTERN,
                     EVEN_8bit_PATTERN,
-                    "A"
+                    reg_name
                 ) ;
 
                 break ;
@@ -157,86 +283,7 @@ public class register_tests
     }
     
     
-    /**
-     * B register test method
-     * 
-     * @param   test_type   (Test_type)
-     */
-    public static void B_reg_test( Test_type test_type )
-    {
-        switch ( test_type )
-        {
-            case LIMITS:
-                System.out.println
-                (
-                    "Testing 8 bit B register storage:  (LIMITS test) : \n"
-                ) ;
-                
-                z80_emu.tests.register_tests.LIMITS_test_8bit_reg
-                (
-                    z80_cpu.registers.z80_regs.B,
-                    MIN_VAL,
-                    MAX_VAL_8bit,
-                    "B"
-                ) ;
 
-                break ;
-
-            case RUN:
-                System.out.println
-                (
-                    "Testing 8 bit B register storage:  (RUN test) : \n"
-                ) ;
-                
-                z80_emu.tests.register_tests.RUN_test_8bit_reg
-                (
-                    z80_cpu.registers.z80_regs.B,
-                    LOWER_LIMIT,
-                    UPPER_8bit_LIMIT,
-                    "B"
-                ) ;
-
-                break ;
-
-            case EXCHANGE:
-                System.out.println
-                (
-                    "Testing 8 bit B register storage:  (EXCHANGE test) : \n"
-                ) ;
-                
-                z80_emu.tests.register_tests.EXCHANGE_test_8bit_reg
-                (
-                    z80_cpu.registers.z80_regs.B,
-                    ODD_8bit_PATTERN,
-                    EVEN_8bit_PATTERN,
-                    "B"
-                ) ;
-
-                break ;
-
-            case RESET:
-                System.out.println
-                (
-                    "Testing RESET of normal and alternate B  register"
-                ) ;
-                
-                z80_emu.tests.register_tests.RESET_test_8bit_reg
-                (
-                    z80_cpu.registers.z80_regs.B,
-                    ODD_8bit_PATTERN,
-                    EVEN_8bit_PATTERN,
-                    "B"
-                ) ;
-
-                break ;
-
-            default:
-                System.out.println( "INVALID OPTION!!!" ) ;
-
-                break ;
-        }
-    }
-    
 
 
     /**
