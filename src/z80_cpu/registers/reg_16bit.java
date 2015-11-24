@@ -169,6 +169,10 @@ public class reg_16bit
      */
     private int AND_FFFF( int word_data )
     {
+        if( word_data < 0 )
+        {
+            word_data = word_data + 0x10000 ;
+        }
         return  word_data % 0x10000 ;
     }
     
