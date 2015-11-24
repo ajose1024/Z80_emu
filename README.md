@@ -1,13 +1,13 @@
-# Z80_emu
-# -------
+Z80_emu
+----
 
 This the ADM (Assembler / Disassembler / Monitor) for the Z80 microprocessor, implmeneted in JAVA
 
 This suit has the code for the following ADM modules:
 
-  -> Assembler
-  -> Disassembler
-  -> Monitor
+  * Assembler
+  * Disassembler
+  * Monitor
 
 The Assembler will receive a Z80 assembly code and will assemble it producing Z80 code that can be 
 executed on the Z80 monitor.
