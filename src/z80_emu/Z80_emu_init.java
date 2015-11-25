@@ -9,6 +9,8 @@ import java.io.* ;
 import java.lang.* ;
 import z80_cpu.registers.* ;
 import z80_emu.tests.* ;
+import z80_cpu.memory.* ;
+import z80_cpu.registers.* ;
 
 /**
  *
@@ -30,17 +32,38 @@ public class Z80_emu_init
         
         System.out.println( "\n\n" ) ;
         
-        z80_cpu.registers.reg_8bit my_A_reg = z80_cpu.registers.z80_regs.A ;
+        reg_8bit my_A_reg = z80_regs.A ;
         
-        System.out.println( "Object: " + z80_cpu.registers.z80_regs.A ) ;
+        System.out.println( "Object: " + z80_regs.A ) ;
         System.out.println( "Object: " + my_A_reg ) ;
         
-        z80_cpu.registers.reg_8bit my_B_reg = z80_cpu.registers.z80_regs.B ;
+        reg_8bit my_B_reg = z80_regs.B ;
         
-        System.out.println( "Object: " + z80_cpu.registers.z80_regs.B ) ;
+        System.out.println( "Object: " + z80_regs.B ) ;
         System.out.println( "Object: " + my_B_reg ) ;
         
+        // Create a memory
         
+        address_space mem = new address_space() ;
+        
+        for( int i = 0 ; i < 65536 ; i++ )
+        {
+            System.out.println(
+                                "Address: " + i + " --> Value: " + mem.fetch( i )
+                              ) ;
+        }
+        
+//        for( int i = 0 ; i< 256 ; i++ )
+//        {
+//            if( i < 128 )
+//            {
+//                System.out.println( i ) ;
+//            }
+//            else
+//            {
+//                System.out.println( i - 256 ) ;
+//            }
+//        }
     }
     
 }
