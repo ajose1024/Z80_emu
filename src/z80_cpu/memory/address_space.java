@@ -32,11 +32,20 @@ public class address_space
      * 
      * This method initializes the private property 'memory' with an array of
      * bytes of 'MEMORY_SIZE' length
+     * 
+     * @param   memory_size     (int)
      */
-    public address_space( )
+    public address_space( int memory_size )
     {
         // Define the memory space
-        this.memory = new byte[ MEMORY_SIZE ] ;
+        if( memory_size == 0 )
+        {
+            this.memory = new byte[ MEMORY_SIZE ] ;
+        }
+        else
+        {
+            this.memory = new byte[ memory_size ] ;
+        }
         
         // Initialize the memory cells
         for( int address = 0 ; address < MEMORY_SIZE ; address++ )

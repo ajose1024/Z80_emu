@@ -44,7 +44,7 @@ public class Z80_emu_init
         
         // Create a memory
         
-        address_space mem = new address_space() ;
+        address_space mem = new address_space( 65536 ) ;
         
         for( int i = 0 ; i < 65536 ; i++ )
         {
