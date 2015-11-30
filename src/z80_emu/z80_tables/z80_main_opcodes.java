@@ -320,14 +320,15 @@ public class z80_main_opcodes
     {
         int opcode_val ;
         
-        opcode_val = opcode % 0x100 ;
-        main_table.get( opcode_val ).execute( null ) ;
-/**
+        opcode_val = core.sys.bounds.int_upper_limit( opcode, 0x100 ) ;
+
+//        main_table.get( opcode_val ).execute( null ) ;
+
         switch ( opcode )
         {
             case 0x00:  main_table.get( 0x00 ).execute( null ) ;
                         break ;
-            case 0x01:  main_table.get( 0x00 ).execute( null ) ;
+            case 0x01:  main_table.get( 0x00 ).execute( new String[]{ "BC", "nnnn" } ) ;
                         break ;
             case 0x02:  main_table.get( 0x00 ).execute( null ) ;
                         break ;
@@ -853,6 +854,7 @@ public class z80_main_opcodes
             case 0xFF:  main_table.get( 0x00 ).execute( null ) ;
                         break ;
         }
- */
+    
+    
     }
 }

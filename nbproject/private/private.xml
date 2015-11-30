@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/DATA/WORK/Java%20Projects/Z80_emu/src/z80_cpu/registers/reg_16bit.java</file>
-            <file>file:/C:/DATA/WORK/Java%20Projects/Z80_emu/src/z80_cpu/registers/reg_flags.java</file>
-            <file>file:/C:/DATA/WORK/Java%20Projects/Z80_emu/src/z80_cpu/registers/reg_8bit.java</file>
-            <file>file:/C:/DATA/WORK/Java%20Projects/Z80_emu/src/z80_emu/Z80_emu_init.java</file>
-            <file>file:/C:/DATA/WORK/Java%20Projects/Z80_emu/src/z80_emu/z80_tables/z80_basic_opcodes.java</file>
+            <file>file:/C:/DATA/WORK/Z80_emu/src/z80_cpu/registers/z80_regs.java</file>
+            <file>file:/C:/DATA/WORK/Z80_emu/src/z80_cpu/exec/misc/NOP.java</file>
+            <file>file:/C:/DATA/WORK/Z80_emu/src/z80_emu/z80_tables/z80_main_opcodes.java</file>
+            <file>file:/C:/DATA/WORK/Z80_emu/src/core/sys/bounds.java</file>
+            <file>file:/C:/DATA/WORK/Z80_emu/src/z80_cpu/exec/load_16bit/ld_rp_nnnn.java</file>
+            <file>file:/C:/DATA/WORK/Z80_emu/src/z80_emu/interfaces/Executable.java</file>
         </group>
     </open-files>
 </project-private>

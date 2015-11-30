@@ -21,6 +21,19 @@ package z80_cpu.registers;
  */
 public class z80_regs
 {
+    public static enum reg_pair
+    {
+        BC,         // BC register pair
+        DE,         // DE register pair
+        HL,         // HL register pair
+        SP,         // SP register pair
+        IX,         // IX register
+        IY,         // IY register
+        PC          // PC register
+    }
+    
+    
+    
     /**
      * Z80  A  8 bit accomulator register
      */
