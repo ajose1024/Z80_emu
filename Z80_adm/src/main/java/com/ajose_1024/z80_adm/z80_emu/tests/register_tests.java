@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package z80_emu.tests;
+package com.ajose_1024.z80_adm.z80_emu.tests;
 
-import  z80_cpu.registers.* ;
+import  com.ajose_1024.z80_adm.z80_cpu.registers.* ;
 
 
 /**
@@ -88,10 +88,10 @@ public class register_tests
      */
     public static void A_reg_test( Test_type test_type )
     {
-        z80_emu.tests.register_tests.reg_test_8bit
+        register_tests.reg_test_8bit
         (
             test_type,
-            z80_cpu.registers.z80_regs.A,
+            z80_regs.A,
             "A"
         ) ;
     }
@@ -104,10 +104,10 @@ public class register_tests
      */
     public static void B_reg_test( Test_type test_type )
     {
-        z80_emu.tests.register_tests.reg_test_8bit
+        register_tests.reg_test_8bit
         (
             test_type,
-            z80_cpu.registers.z80_regs.B,
+            z80_regs.B,
             "B"
         ) ;
     }
@@ -120,10 +120,10 @@ public class register_tests
      */
     public static void C_reg_test( Test_type test_type )
     {
-        z80_emu.tests.register_tests.reg_test_8bit
+        register_tests.reg_test_8bit
         (
             test_type,
-            z80_cpu.registers.z80_regs.C,
+            z80_regs.C,
             "C"
         ) ;
     }
@@ -136,10 +136,10 @@ public class register_tests
      */
     public static void D_reg_test( Test_type test_type )
     {
-        z80_emu.tests.register_tests.reg_test_8bit
+        register_tests.reg_test_8bit
         (
             test_type,
-            z80_cpu.registers.z80_regs.D,
+            z80_regs.D,
             "D"
         ) ;
     }
@@ -152,10 +152,10 @@ public class register_tests
      */
     public static void E_reg_test( Test_type test_type )
     {
-        z80_emu.tests.register_tests.reg_test_8bit
+        register_tests.reg_test_8bit
         (
             test_type,
-            z80_cpu.registers.z80_regs.E,
+            z80_regs.E,
             "E"
         ) ;
     }
@@ -168,10 +168,10 @@ public class register_tests
      */
     public static void H_reg_test( Test_type test_type )
     {
-        z80_emu.tests.register_tests.reg_test_8bit
+        register_tests.reg_test_8bit
         (
             test_type,
-            z80_cpu.registers.z80_regs.H,
+            z80_regs.H,
             "H"
         ) ;
     }
@@ -184,10 +184,10 @@ public class register_tests
      */
     public static void L_reg_test( Test_type test_type )
     {
-        z80_emu.tests.register_tests.reg_test_8bit
+        register_tests.reg_test_8bit
         (
             test_type,
-            z80_cpu.registers.z80_regs.L,
+            z80_regs.L,
             "L"
         ) ;
     }
@@ -218,7 +218,7 @@ public class register_tests
                     "Testing 8 bit " + reg_name + " register storage:  (LIMITS test) : \n"
                 ) ;
                 
-                z80_emu.tests.register_tests.LIMITS_test_8bit_reg
+                register_tests.LIMITS_test_8bit_reg
                 (
                     register,
                     MIN_VAL,
@@ -234,7 +234,7 @@ public class register_tests
                     "Testing 8 bit " + reg_name + " register storage:  (RUN test) : \n"
                 ) ;
                 
-                z80_emu.tests.register_tests.RUN_test_8bit_reg
+                register_tests.RUN_test_8bit_reg
                 (
                     register,
                     LOWER_LIMIT,
@@ -250,9 +250,9 @@ public class register_tests
                     "Testing 8 bit " + reg_name + " register storage:  (EXCHANGE test) : \n" 
                 ) ;
                 
-                z80_emu.tests.register_tests.EXCHANGE_test_8bit_reg
+                register_tests.EXCHANGE_test_8bit_reg
                 (
-                    z80_cpu.registers.z80_regs.A,
+                    z80_regs.A,
                     ODD_8bit_PATTERN,
                     EVEN_8bit_PATTERN,
                     "A" ) ;
@@ -265,7 +265,7 @@ public class register_tests
                     "Testing RESET of normal and alternate " + reg_name + " register"
                 ) ;
                 
-                z80_emu.tests.register_tests.RESET_test_8bit_reg
+                register_tests.RESET_test_8bit_reg
                 (
                     register,
                     ODD_8bit_PATTERN,
@@ -406,24 +406,24 @@ public class register_tests
             System.out.println( ) ;
 
             // Test normal register with value  min_val - 1
-            z80_emu.tests.register_tests.test_8bit_reg_value(
+            register_tests.test_8bit_reg_value(
                                                                 register,
                                                                 test_byte_val,
                                                                 reg_name
                                                             ) ;
             // Exchange normal register with alternate register
-            z80_emu.tests.register_tests.exchange_8bit_registers(
+            register_tests.exchange_8bit_registers(
                                                                     register,
                                                                     reg_name
                                                                 ) ;
             // Test normal register with value  min_val - 1
-            z80_emu.tests.register_tests.test_8bit_reg_value(
+            register_tests.test_8bit_reg_value(
                                                                 register,
                                                                 test_byte_val,
                                                                 reg_name
                                                             ) ;
             // Exchange normal register with alternate register
-            z80_emu.tests.register_tests.exchange_8bit_registers(
+            register_tests.exchange_8bit_registers(
                                                                     register,
                                                                     reg_name
                                                                 ) ;
@@ -515,24 +515,24 @@ public class register_tests
                                                 String reg_name
                                               )
     {
-        z80_emu.tests.register_tests.test_8bit_reg_value(
+        register_tests.test_8bit_reg_value(
                                                         register,
                                                         normal_reg_value,
                                                         reg_name
         ) ;
         
-        z80_emu.tests.register_tests.exchange_8bit_registers(
+        register_tests.exchange_8bit_registers(
                                                                 register,
                                                                 reg_name
                                                             );
         
-        z80_emu.tests.register_tests.test_8bit_reg_value(
+        register_tests.test_8bit_reg_value(
                                                         register,
                                                         alt_reg_value,
                                                         reg_name
         ) ;
         
-        z80_emu.tests.register_tests.exchange_8bit_registers(
+        register_tests.exchange_8bit_registers(
                                                                 register,
                                                                 reg_name
                                                             );
@@ -555,7 +555,7 @@ public class register_tests
         
         register.exx_reg( ) ;
         
-        z80_emu.tests.register_tests.RESET_test_8bit_reg
+        register_tests.RESET_test_8bit_reg
         (
             register,
             ODD_8bit_PATTERN,

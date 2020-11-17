@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package z80_cpu.exec.misc;
+package com.ajose_1024.z80_adm.z80_cpu.exec.misc;
 
-import  z80_cpu.registers.* ;
-import  z80_emu.interfaces.* ;
+import  com.ajose_1024.z80_adm.z80_cpu.registers.* ;
+import  com.ajose_1024.z80_adm.z80_emu.interfaces.* ;
 
 
 /**

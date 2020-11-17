@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package z80_emu ;
+package com.ajose_1024.z80_adm.z80_emu ;
 
 import java.io.* ;
 import java.lang.* ;
-import z80_cpu.registers.* ;
-import z80_emu.tests.* ;
-import z80_cpu.memory.* ;
-import z80_cpu.registers.* ;
+import com.ajose_1024.z80_adm.z80_cpu.registers.* ;
+import com.ajose_1024.z80_adm.z80_emu.tests.* ;
+import com.ajose_1024.z80_adm.z80_cpu.memory.* ;
+import com.ajose_1024.z80_adm.z80_cpu.registers.* ;
 
 /**
  *
@@ -21,14 +21,14 @@ public class Z80_emu_init
 
     private static final int xpto = 0 ;
     
-    private int A_value = z80_cpu.registers.z80_regs.A.fetch() ;
+    private int A_value = z80_regs.A.fetch() ;
     
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args)
     {
-        z80_emu.tests.register_tests.B_reg_test( z80_emu.tests.register_tests.Test_type.LIMITS ) ;
+        register_tests.B_reg_test( register_tests.Test_type.LIMITS ) ;
         
         System.out.println( "\n\n" ) ;
         

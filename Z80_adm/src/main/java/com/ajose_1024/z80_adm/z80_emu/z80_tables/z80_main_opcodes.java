@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package z80_emu.z80_tables ;
+package com.ajose_1024.z80_adm.z80_emu.z80_tables ;
 
 import java.util.HashMap ;
 import java.util.Map ;
 import java.util.Iterator ;
 import java.util.Set ;
 
-import z80_emu.interfaces.* ;
-import z80_cpu.exec.misc.* ;
+import com.ajose_1024.z80_adm.core.sys.*;
+import com.ajose_1024.z80_adm.z80_emu.interfaces.* ;
+import com.ajose_1024.z80_adm.z80_cpu.exec.misc.* ;
 
 /**
  *
@@ -320,7 +321,7 @@ public class z80_main_opcodes
     {
         int opcode_val ;
         
-        opcode_val = core.sys.bounds.int_upper_limit( opcode, 0x100 ) ;
+        opcode_val = bounds.int_upper_limit( opcode, 0x100 ) ;
 
 //        main_table.get( opcode_val ).execute( null ) ;
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package z80_cpu.memory;
+package com.ajose_1024.z80_adm.z80_cpu.memory;
 
 /**
  *

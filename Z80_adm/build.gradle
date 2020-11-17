@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+description = 'Z80 Assembler/Disassembler/Monitor'
+    group = 'com.ajose_1024'
+
+mainClassName = 'com.ajose_1024.Z80_adm.Main'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation     'junit:junit:4.13'
+}
