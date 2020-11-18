@@ -20,28 +20,51 @@ package com.ajose_1024.z80_adm.z80_cpu.config;
 import  com.ajose_1024.z80_adm.core.sys.* ;
 
 /**
+ * Class:   constants
+ * 
+ * This class holds global constants defined here
  *
  * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class constants
 {
     /**
-     * MAX_MEMORY_SIZE  constant
-    */
+     * Constant:    MAX_MEMORY_SIZE
+     * 
+     * This constant holds the MAXIMUM memory size.
+     * 
+     * Normally it is equal to the MAX_ADDRESS_SPACE, but can be lower.
+     */
     public static final int MAX_MEMORY_SIZE = 65536 ;
     
     /**
-     * MIN_MEM_BLOCK_SIZE  constant
+     * Constant:    MIN_MEM_BLOCK_SIZE
+     * 
+     * This constant holds the MINIMUM memory block size.
      */
     public static final int MIN_MEM_BLOCK_SIZE = 256 ;
     
     /**
-     * MAX_BASE_ADDRESS  constant
+     * Constant:    MEMORY_PAGE_SIZE
+     * 
+     * This constant holds the memory PAGE size.
      */
-    public static final int MAX_BASE_ADDRESS = MAX_MEMORY_SIZE - 1024 ;
+    public static final int MEMORY_PAGE_SIZE = 1024 ;
     
     /**
-     * MAX_ADDRESS_SPACE  constant
+     * Constant:    MAX_MEMORY_BASE_ADDRESS
+     * 
+     * This constant holds the MAXIMUM memory base address.
+     * 
+     * This, normally, is the MAX_MEMORY_SIZE minus the MEMORY_PAGE_SIZE.
+     */
+    public static final int MAX_MEMORY_BASE_ADDRESS = MAX_MEMORY_SIZE
+                                                    - MEMORY_PAGE_SIZE ;
+    
+    /**
+     * Constant:    MAX_ADDRESS_SPACE
+     * 
+     * This constant holds the MAXIMUM address space.
      */
     public static final int MAX_ADDRESS_SPACE = (int) bits.bit_20.bit_value() ;
     

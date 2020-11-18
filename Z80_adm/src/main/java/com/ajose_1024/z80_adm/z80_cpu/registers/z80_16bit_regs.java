@@ -15,77 +15,66 @@
  * limitations under the License.
  */
 
-package com.ajose_1024.z80_adm.z80_cpu.registers ;
+package com.ajose_1024.z80_adm.z80_cpu.registers;
+
 
 /**
- * Class:   z80_8bit_regs
+ * Class:   z80_16bit_regs
  * 
- * This class defines the Z80 register names for 8 bit registers
+ * This class defines the Z80 register names for 16 bit registers
  * 
  * @Type:   ENUM
  * 
  * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
-public enum z80_8bit_regs
+public enum z80_16bit_regs
 {
-    B   ( 0,    "B",    0,  "HL" ),
-    C   ( 1,    "C",    0,  "HL" ),
-    D   ( 2,    "D",    0,  "HL" ),
-    E   ( 3,    "E",    0,  "HL" ),
-    H   ( 4,    "H",    0,  "HL" ),
-    L   ( 5,    "L",    0,  "HL" ),
-    $HL ( 6,    "(HL)", 0,  "HL"),
-    A   ( 7,    "A",    0,  "HL"),
-    
-    IXh ( 4,    "IXh",  1,  "IX" ),
-    IXl ( 5,    "IXl",  1,  "IX" ), 
-    $IX ( 6,    "(IX+d)", 1,"IX" ),
-    
-    IYh ( 4,    "IYh",  2,  "IY" ),
-    IYl ( 5,    "IYl",  2,  "IY" ),
-    $IY ( 6,    "(IY+d)", 2,"IY" ),
-    
-    F   ( -1,   "F",    0,  "HL" ),
-    
-    R   ( -2,   "R",    0,  "HL" ),
-    I   ( -3,   "I",    0,  "HL" ),
+    BC  ( 0,    "BC",   0,  "HL" ),
+    DE  ( 1,    "DE",   0,  "HL" ),
+    HL  ( 2,    "HL",   0,  "HL" ),
+    AF  ( 3,    "AF",   0,  "HL" ),
+    SP  ( 2,    "SP",   0,  "SP" ),
+    PC  ( 2,    "PC",   0,  "PC" ),
+    IX  ( 2,    "IX+d", 1,  "IX" ),
+    IY  ( 2,    "IY+d", 2,  "IY" ),
     ;
     
+    
     /**
-     * Property:   reg_num
+     *  Property:   reg_num
      *  
-     * This private property holds the 8 bit register's number in the 8 bit
-     * register set, used in the dynamic ENUM object instantialization.
+     *  This private property holds the 8 bit register's number in the 16 bit
+     *  register set, used in the dynamic ENUM object instantialization.
      */
     private final   int     reg_num ;
     
     /**
-     * Property:   reg_name
+     *  Property:   reg_name
      * 
-     * This private property holds the 8 bit register's name in the 8 bit
-     * register set, used in the dynamic ENUM object instantialization.
+     *  This private property holds the 8 bit register's name in the 16 bit
+     *  register set, used in the dynamic ENUM object instantialization.
      */
     private final   String  reg_name ;
     
     /**
-     * Property:   index_mode
+     *  Property:   index_mode
      * 
-     * This private property holds the 8 bit register's index mode in the 8 bit
-     * register set, used in the dynamic ENUM object instantialization.
+     *  This private property holds the 8 bit register's index mode in the 16 bit
+     *  register set, used in the dynamic ENUM object instantialization.
      */
     private final   int     index_mode ;
     
     /**
-     * Property:   index_reg
+     *  Property:   index_reg
      * 
-     * This private property holds the 8 bit register's index register in the
-     * 8 bit register set, used in the dynamic ENUM object instantialization.
+     *  This private property holds the 8 bit register's index register in the
+     *  16 bit register set, used in the dynamic ENUM object instantialization.
      */
     private final   String  index_reg ;
-
+    
 
     /**
-     * Constructor:    z80_8bit_regs
+     * Constructor:    z80_16bit_regs
      *
      * This is the constructor that builds the dynamic ENUM object on the fly.
      * 
@@ -96,7 +85,7 @@ public enum z80_8bit_regs
      * 
      * @return      (Object)
      */
-    private z80_8bit_regs( int reg_num, String reg_name, int index_mode, String index_reg )
+    private z80_16bit_regs( int reg_num, String reg_name, int index_mode, String index_reg )
     {
         this.reg_num    = reg_num ;
         this.reg_name   = reg_name ;
@@ -163,6 +152,5 @@ public enum z80_8bit_regs
     {
         return  this.index_reg ;
     }
-    
     
 }

@@ -18,8 +18,14 @@
 package com.ajose_1024.z80_adm.core.sys;
 
 /**
+ *  Class:  bits
+ * 
+ *  This ENUM class allows to refer a bit by bit name and get it's value and
+ *  it's name as a string.
  *
- * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
+ *  @Type:  ENUM
+ * 
+ *  @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 
 public enum bits
@@ -86,10 +92,9 @@ public enum bits
     bit_59  ( 1152921504606846976L  , "bit_59" ),   // Value:   1152921504606846976
     bit_60  ( 2305843009213693952L  , "bit_60" ),   // Value:   2305843009213693952
     bit_61  ( 4611686018427387904L  , "bit_61" ),   // Value:   4611686018427387904
-
     ;
     
-    /*
+    /**
      *  Property:   bit_value
      *
      *  This private property holds the bit value during the dynamic ENUM object
@@ -97,7 +102,7 @@ public enum bits
      */
     private final long bit_value ;
     
-    /*
+    /**
      *  Property:   bit_name
      *  
      *  This private property holds the bit name during the dynamic ENUM object
@@ -106,10 +111,12 @@ public enum bits
     private final String bit_name ;
     
     
-    /*
+    /**
      *  Constructor:    bits
      *
      *  This is the constructor that builds the dynamic ENUM object on the fly.
+     * 
+     *  @return     Object
      */
     private bits( long bit_value, String bit_name )
     {
@@ -118,10 +125,12 @@ public enum bits
     }
     
     
-    /*
+    /**
      *  Method:     bit_value
      *  
      *  This method returns the value of the bit.
+     * 
+     *  @return     int         bit_value
      */
     public long bit_value()
     {
@@ -129,10 +138,12 @@ public enum bits
     }
 
     
-    /*
+    /**
      *  Method:     bit_name
      *  
      *  This method returns the name of the bit.
+     * 
+     *  @return     String      bit_name
      */
     public String bit_name()
     {

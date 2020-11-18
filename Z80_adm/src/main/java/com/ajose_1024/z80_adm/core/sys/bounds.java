@@ -18,7 +18,12 @@
 package com.ajose_1024.z80_adm.core.sys ;
 
 /**
- *
+ * Class:   bounds
+ * 
+ * This class is used to test is a parameter is within giving bounds
+ * 
+ * @Type:   Normal Class
+ * 
  * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class bounds
@@ -32,10 +37,11 @@ public class bounds
      * If it is lower than 'low_limit' it returns 'low_limit'.
      * If it is higher than the 'hugh_limit' it returns 'high_limit'
      * 
-     * @param   value       (int)
-     * @param   low_limit   (int)
-     * @param   high_limit  (int)
-     * @return              (int)
+     * @param       (int)       value
+     * @param       (int)       low_limit
+     * @param       (int)       high_limit
+     * 
+     * @return      (int)
      */
     public static final int int_range_bound( int value, int low_limit, int high_limit )
     {
@@ -61,9 +67,10 @@ public class bounds
      * This method returns the value in 'value' bounded to the limits of 0 and
      * top_limit - 1
      * 
-     * @param value
-     * @param high_limit
-     * @return 
+     * @param       (int)       value
+     * @param       (int)       high_limit
+     * 
+     * @return      (int)
      */
     public static final int int_upper_limit( int value, int top_limit )
     {
