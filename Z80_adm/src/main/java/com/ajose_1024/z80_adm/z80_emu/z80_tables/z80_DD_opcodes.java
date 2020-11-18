@@ -19,7 +19,7 @@ package com.ajose_1024.z80_adm.z80_emu.z80_tables;
 
 /**
  *
- * @author anemo_000
+ * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class z80_DD_opcodes {
     

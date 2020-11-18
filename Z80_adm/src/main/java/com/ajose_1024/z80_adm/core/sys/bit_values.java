@@ -20,7 +20,7 @@ package com.ajose_1024.z80_adm.core.sys;
 
 /**
  *
- * @author ajose_1024
+ * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class bit_values
 {

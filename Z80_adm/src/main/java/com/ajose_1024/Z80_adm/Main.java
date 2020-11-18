@@ -21,7 +21,7 @@ import com.ajose_1024.z80_adm.z80_emu.* ;
 
 /**
  *
- * @author ajose_1024
+ * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class Main
 {

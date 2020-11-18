@@ -19,7 +19,7 @@ package com.ajose_1024.z80_adm.z80_cpu.registers ;
 
 /**
  *
- * @author ajose_1024
+ * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public enum z80_8bit_regs
 {

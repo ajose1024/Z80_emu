@@ -22,7 +22,7 @@ import  com.ajose_1024.z80_adm.z80_cpu.registers.* ;
 
 /**
  *
- * @author ADMIN
+ * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class register_tests
 {

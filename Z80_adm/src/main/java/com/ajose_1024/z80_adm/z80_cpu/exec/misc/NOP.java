@@ -23,7 +23,7 @@ import  com.ajose_1024.z80_adm.z80_emu.interfaces.* ;
 
 /**
  *
- * @author Utilizador
+ * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class NOP implements Executable
 {

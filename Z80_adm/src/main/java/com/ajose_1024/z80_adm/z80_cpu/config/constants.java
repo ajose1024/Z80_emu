@@ -21,7 +21,7 @@ import  com.ajose_1024.z80_adm.core.sys.* ;
 
 /**
  *
- * @author Antonio Jose Gomes
+ * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class constants
 {

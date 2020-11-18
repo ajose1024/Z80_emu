@@ -19,7 +19,7 @@ package com.ajose_1024.z80_adm.core.sys ;
 
 /**
  *
- * @author Utilizador
+ * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class bounds
 {

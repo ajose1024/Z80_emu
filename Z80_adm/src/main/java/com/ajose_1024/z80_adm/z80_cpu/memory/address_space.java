@@ -19,7 +19,7 @@ package com.ajose_1024.z80_adm.z80_cpu.memory;
 
 /**
  *
- * @author ADMIN
+ * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class address_space
 {

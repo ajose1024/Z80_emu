@@ -26,7 +26,7 @@ import com.ajose_1024.z80_adm.z80_cpu.registers.* ;
 
 /**
  *
- * @author anemo_000
+ * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class Z80_emu_init
 {

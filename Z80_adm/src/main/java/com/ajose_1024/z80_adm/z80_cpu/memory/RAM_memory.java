@@ -22,7 +22,7 @@ import com.ajose_1024.z80_adm.z80_cpu.config.constants;
 
 /**
  *
- * @author ADMIN
+ * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
  */
 public class RAM_memory 
 {

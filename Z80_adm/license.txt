@@ -15,19 +15,3 @@
  * limitations under the License.
  */
 
-package com.ajose_1024.z80_adm.z80_emu.interfaces ;
-
-import  com.ajose_1024.z80_adm.z80_cpu.registers.* ;
-
-/**
- *
- * @author Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>
- */
-public interface Executable
-{
-    public String get_command_name() ;
-    
-    public void execute( String[] params ) ;
-    
-    public void execute_2( reg_16bit params ) ;
-}
