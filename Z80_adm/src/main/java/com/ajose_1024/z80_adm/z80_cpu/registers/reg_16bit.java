@@ -1,5 +1,6 @@
 /*
  * Copyright 2015 Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>.
+ * Copyright 2020 Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>.
  *
  * Licensed under the Artistic License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.ajose_1024.z80_adm.z80_cpu.registers ;
 
 /**
@@ -62,6 +64,8 @@ public class reg_16bit
      * within the valid range of 0x0000 and 0xFFFF
      * 
      * @param   word_data   (int)
+     * 
+     * @return  void        (void)
      */
     public void store( int word_data )
     {
@@ -120,6 +124,7 @@ public class reg_16bit
      * This method returns the lower byte of the passed word value
      * 
      * @param   word_data   (int)
+     * 
      * @return  byte_data   (int)
      */
     private int lower_byte( int word_data )
@@ -134,6 +139,7 @@ public class reg_16bit
      * This method returns the higher byte of the passed word value
      * 
      * @param   word_data   (int)
+     * 
      * @return  byte_data   (int)
      */
     private int higher_byte( int word_data )
@@ -150,6 +156,7 @@ public class reg_16bit
      * 
      * @param   low_byte    (int)
      * @param   high_byte   (int)
+     * 
      * @return  word_data   (int)
      */
     private int word_data( int high_byte, int low_byte )
@@ -165,6 +172,7 @@ public class reg_16bit
      * 0 and 65535
      * 
      * @param   word_data   (int)
+     * 
      * @return  word_data   (int)
      */
     private int AND_FFFF( int word_data )
@@ -176,5 +184,4 @@ public class reg_16bit
         return  word_data % 0x10000 ;
     }
     
-   
 }

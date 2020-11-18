@@ -1,5 +1,6 @@
 /*
  * Copyright 2015 Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>.
+ * Copyright 2020 Antonio Jose Gomes <ajose.gomes@ajgomes.datanet-pt.net>.
  *
  * Licensed under the Artistic License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.ajose_1024.z80_adm.z80_cpu.registers ;
 
 /**
@@ -47,6 +49,8 @@ public class reg_8bit
      * within the valid range of 0x00 and 0xFF
      * 
      * @param   byte_data   (int)
+     * 
+     * @return  void        (void)
      */
     public void store( int byte_data )
     {
@@ -72,7 +76,7 @@ public class reg_8bit
      * Method:  exx_reg( )
      * 
      * This method exchanges the value of the main register with the alternate
-     * regiter
+     * register
      */
     public void exx_reg( )
     {
@@ -102,6 +106,7 @@ public class reg_8bit
      * 0 and 255
      * 
      * @param   byte_data   (int)
+     * 
      * @return  byte_data   (int)
      */
     private int AND_FF( int byte_data )
