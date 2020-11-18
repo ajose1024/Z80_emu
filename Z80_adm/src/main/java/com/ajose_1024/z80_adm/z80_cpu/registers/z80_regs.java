@@ -35,7 +35,7 @@ public class z80_regs
     
     
     /**
-     * Z80  A  8 bit accomulator register
+     * Z80  A  8 bit accumulator register
      */
     public static reg_8bit A = new reg_8bit() ;
     

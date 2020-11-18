@@ -42,6 +42,12 @@ public class Z80_emu_init
         System.out.println( "Object: " + z80_regs.B ) ;
         System.out.println( "Object: " + my_B_reg ) ;
         
+        
+        reg_16bit my_HL_reg = z80_regs.HL ;
+        
+        System.out.println( "Object: " + z80_regs.HL ) ;
+        System.out.println( "Object: " + my_HL_reg ) ;
+        
         // Create a memory
         
         address_space mem = new address_space( 65536 ) ;
