@@ -325,6 +325,8 @@ public class z80_main_opcodes
 
 //        main_table.get( opcode_val ).execute( null ) ;
 
+        main_table.get ( opcode ).execute ( null ) ;
+        
         switch ( opcode )
         {
             case 0x00:  main_table.get( 0x00 ).execute( null ) ;
