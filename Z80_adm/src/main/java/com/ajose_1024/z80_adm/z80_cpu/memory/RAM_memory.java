@@ -54,7 +54,9 @@ public class RAM_memory
     {
         // Ensure that 'base_address' does not exceed MAX_MEMORY_SIZE
         int safe_base_address ;
+        
         safe_base_address = base_address % constants.MAX_MEMORY_SIZE ;
+        
         if( safe_base_address > constants.MAX_BASE_ADDRESS )
         {
             safe_base_address = constants.MAX_BASE_ADDRESS ;
