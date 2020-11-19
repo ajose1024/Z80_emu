@@ -29,8 +29,7 @@ public class RAM_memory
     /**
      * MAX RAM memory size
      */
-    private final int MEMORY_SIZE =
-            memory_sizes.get_mem_size( memory_sizes.mem.size_64k ) ;
+    private final int MEMORY_SIZE = memory_sizes.size_64k.value() ;
     
     /**
      * RAM base address
@@ -57,9 +56,9 @@ public class RAM_memory
         
         safe_base_address = base_address % constants.MAX_MEMORY_SIZE ;
         
-        if( safe_base_address > constants.MAX_BASE_ADDRESS )
+        if( safe_base_address > constants.MAX_MEMORY_BASE_ADDRESS )
         {
-            safe_base_address = constants.MAX_BASE_ADDRESS ;
+            safe_base_address = constants.MAX_MEMORY_BASE_ADDRESS ;
         }
         this.MEMORY_BASE_ADDRESS = safe_base_address ;
         
